@@ -1,0 +1,35 @@
+@font-face {
+  font-family: 'fontku';
+  src: url('/fonts/Memsmark! Demo.ttf');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'morningbreeze';
+  src: url('/fonts/fa-v4compatibility.woff2');
+  font-display: swap;
+}
+
+.content1 h3 {
+  font-family: 'morningbreeze';
+}
+
+.content1 p {
+  font-family: 'morningbreeze';
+}
+
+.text-content1 li {
+  font-family: 'morningbreeze';
+}
+
+.text-content p {
+  font-family: 'morningbreeze';
+}
+
+.text-c1 strong, li{
+  font-family: 'morningbreeze';
+}
+
+ .variabel-main {
+     font-family: 'morningbreeze';
+ }

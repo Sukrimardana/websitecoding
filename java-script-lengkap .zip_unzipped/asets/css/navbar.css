@@ -1,0 +1,144 @@
+/* Reset CSS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+:root {
+  --color: hsla(159, 100%, 99%, 1);
+  --background-color: #42445A;
+}
+
+/* Navbar Styles */
+.navbar {
+  background: var(--background-color);
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  z-index: 4000;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-menu {
+  position: absolute;
+  left: -100%;
+  line-height: 1.8;
+  top: 100%;
+  overflow-y: auto;
+  height: 100vh;
+  padding: 2rem;
+  flex-direction: column;
+  backdrop-filter: blur(5px);
+  background: var(--background-color);
+  width: 15rem;
+  transition: 0.3s;
+  color: var(--color);
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-menu.active {
+  left: 0;
+}
+
+.menu-header {
+  list-style: none;
+  color: hsla(240, 100%, 99%, 1);
+}
+
+.submenu-header {
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.toggle-arrow {
+  font-size: 18px;
+  transition: transform 0.3s ease;
+}
+
+.toggle-arrow.active {
+  transform: rotate(90deg);
+}
+
+.nav-link {
+  background: transparent;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+
+.nav-link.active {
+  max-height: 500px; /* Nilai cukup besar
+  untuk menampung konten */
+}
+
+.nav-link ul {
+  line-height: 1.8;
+}
+
+.nav-link li {
+  list-style: none;
+}
+
+.nav-link a {
+  color: hsla(159, 100%, 97%, 0.65);
+  text-decoration: none;
+  cursor: pointer;
+  font-size: 15px;
+  transition: color 0.2s ease-in-out;
+}
+
+.nav-link a:hover {
+  color: var(--color);
+  font-weight: bold;
+}
+
+.navbar-toggle {
+  width: 30px;
+  height: 5px;
+  display: block;
+  position: relative;
+  background: var(--color);
+  cursor: pointer;
+}
+
+.navbar-toggle.active {
+  background: none;
+}
+
+.navbar-toggle:before,
+.navbar-toggle:after {
+  content: '';
+  width: 30px;
+  height: 5px;
+  transition: all 0.4s ease-out;
+  position: absolute;
+  background: var(--color);
+}
+
+.navbar-toggle:before {
+  top: 8px;
+}
+
+.navbar-toggle:after {
+  top: -8px;
+}
+
+.navbar-toggle.active:before {
+  transform: rotate(45deg);
+  top: 0;
+}
+
+.navbar-toggle.active:after {
+  transform: rotate(-45deg);
+  top: 0;
+}

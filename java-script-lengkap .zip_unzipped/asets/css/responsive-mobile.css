@@ -1,0 +1,32 @@
+@media screen and (min-width: 320px) and (max-width: 480px){
+  .img {
+    padding: 0;
+    width: 100%;
+    flex-grow: 0;
+  }
+  
+  .img img {
+    position: relative;
+    width: 100%;
+    height: 15rem;
+  }
+  
+  .var-asiggment {
+    padding: 2rem 0;
+  }
+  
+  .container {
+    width: auto;
+  }
+  
+  .img-robot {
+  position: absolute;
+  width: 5rem;
+  right: 0;
+  background: red;
+  z-index: 0;
+  background: transparent;
+  height: 5rem;
+}
+}
+

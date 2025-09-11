@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tipe Data Primitif</title>
+    <link rel="stylesheet" href="/asets/css/navbar.css">
+    <link rel="stylesheet" href="/style.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="/asets/css/font.css" type="text/css" media="all" />
+</head>
+<body>
+    <!-- Navbar akan dimuat oleh JavaScript -->
+    <div id="navbar-container"></div>
+    
+    <main class="main-content primitif-main">
+        <div class="container id-variabel1">
+           <div class="judul-materi">
+              <h3>Tipe Data Primitif di JavaScript</h3> 
+           </div>
+        </div>
+        
+        <div class="container content-var">
+            JavaScript adalah bahasa yang dinamis dan loosely typed, yang berarti variabel tidak langsung terkait dengan tipe data tertentu. Namun, nilai yang disimpan dalam variabel itu sendiri memiliki tipe.
+
+Tipe data primitif di JavaScript adalah data yang bukan objek dan tidak memiliki method (pada dasarnya). Yang unik dari JavaScript adalah ia menyediakan object wrapper untuk tipe primitif ini, yang memungkinkan kita menggunakan method seolah-olah primitif adalah objek (contoh: 'hello'.length).
+
+Menurut ECMAScript standard (spesifikasi dasar JavaScript), ada 7 tipe data primitif:
+        </div>
+        <ol>
+        <div class="container primitif">
+            <div class="content-id-primitif">                    
+                <li><strong>Number</strong></li>
+                <ul>
+                    <li>Penjelasan: Merupakan tipe data untuk semua angka, baik bilangan bulat (integer) maupun pecahan (floating-point). JavaScript tidak memiliki tipe terpisah untuk integer dan float; semuanya adalah Number.</li>
+                </ul>
+                <ul>
+                    <li>Nilai Khusus: NaN (Not a Number) dan Infinity.</li>
+                </ul>
+                </div>                    
+                
+        <div class="code-card">
+            <div class="header-card">
+                <div class="window-control">
+                <div class="control close"></div>
+                <div class="control minimaze"></div>       
+                </div>
+                <div class="file-name">
+                    number.js
+                </div>
+            </div>
+            <div class="card-body">
+    <pre><code><span class="comment">// Tipe Data Number dalam JavaScript</span>
+<span class="keyword">let</span> <span class="variable">age</span> <span class="operator">=</span> <span class="number">30</span>; <span class="comment">// integer</span>
+<span class="keyword">let</span> <span class="variable">price</span> <span class="operator">=</span> <span class="number">99.99</span>; <span class="comment">// floating-point</span>
+<span class="keyword">let</span> <span class="variable">result</span> <span class="operator">=</span> <span class="number">10</span> <span class="operator">/</span> <span class="string">"abc"</span>; <span class="comment">// NaN</span>
+<span class="keyword">let</span> <span class="variable">infinite</span> <span class="operator">=</span> <span class="number">1</span> <span class="operator">/</span> <span class="number">0</span>; <span class="comment">// Infinity</span></code></pre>
+</div>
+            
+        </div>
+        </div>
+        <div class="container primitif">
+            <div class="content-id-primitif">
+                <li><strong>String</strong></li>
+                <ul>
+                    <li>Penjelasan: Merepresentasikan serangkaian karakter. digunakan untuk teks. Diapit oleh tanda kutip tunggal ('), ganda ("), atau backtick ( ` ).</li>
+                </ul>
+            </div>
+            
+            <div class="code-card">
+                <div class="header-card">
+                    <div class="window-control">
+                        <div class="control close"></div>
+                        <div class="control minimaze"></div>
+                    </div>
+                    <div class="file-name">
+                        string.js
+                    </div>
+                </div>
+                <div class="card-body">
+                    <pre><code><span class="comment">//Tipe data variabel dalam java script</span>
+<span class="keyword">let</span> <span class="variable">name</span> <span class="operator">=</span> <span class="string">"jonny";</span>
+<span class="keyword">let</span> <span class="variable">greeting</span> <span class="operator">=</span> <span class="string">"Hello world!";</span>
+<span class="keyword">let</span> <span class="variable">message</span> <span class="operator">=</span> <span class="string">`My nama is <span class="punctuation">{ $name</span><span class="punctuation"> }</span>`;
+<span class="comment"> // Template literal dengan interpolation</span></span></code></pre>
+                </div>
+                
+            </div>
+        </div>
+        
+        <div class="container primitif">
+            <div class="content-id-primitif">
+                <li><strong>Booleans</strong></li>
+                <ul>
+                    <li>Penjelasan: Hanya memiliki dua nilai: true (benar) dan false (salah). Sangat penting untuk pengambilan keputusan (kondisi seperti if/else).</li>
+                </ul>
+            </div>
+            
+            <div class="code-card">
+                <div class="header-card">
+                    <div class="window-control">
+                        <div class="control close"></div>
+                        <div class="control minimaze"></div>
+                    </div>
+                    <div class="file-name">
+                        Booleans.js
+                    </div>
+                </div>
+                <div class="card-body">
+                    <pre><code><span class="comment">//Boolean dalam java script</span>
+<span class="keyword">let</span> <span class="variable">Islog</span> <span class="operator">=</span> <span class="boolean">true</span>;
+<span class="keyword">let</span> <span class="variable">greeting</span> <span class="operator">=</span> <span class="number">10 > 5</span>;<span class="comment">// Nilainya adalah true </span>
+</code></pre>
+                </div>
+                
+            </div>
+        </div>
+        
+        <div class="container primitif">
+            <div class="content-id-primitif">
+                <li><strong>Undefined</strong></li>
+                <ul>
+                    <li>Penjelasan: Nilai ini diberikan secara otomatis kepada variabel yang telah dideklarasikan tetapi belum diberi nilai.</li>
+                </ul>
+            </div>
+            
+            <div class="code-card">
+                <div class="header-card">
+                    <div class="window-control">
+                        <div class="control close"></div>
+                        <div class="control minimaze"></div>
+                    </div>
+                    <div class="file-name">
+                        Undefined.js
+                    </div>
+                </div>
+<div class="card-body">
+    <pre><code><span class="keyword">let</span> <span class="variable">x</span>;
+<span class="function">console.</span><span class="function">log</span><span class="variable">(x)</span>; <span class="comment">// Output: undefined</span></code></pre>
+</div>
+                
+            </div>
+        </div>
+        
+        <div class="container primitif">
+            <div class="content-id-primitif">
+                <li><strong>Null</strong></li>
+                <ul>
+                    <li>Penjelasan: Hanya memiliki dua nilai: true (benar) dan false (salah). Sangat penting untuk pengambilan keputusan (kondisi seperti if/else).</li>
+                </ul>
+            </div>
+            
+            <div class="code-card">
+                <div class="header-card">
+                    <div class="window-control">
+                        <div class="control close"></div>
+                        <div class="control minimaze"></div>
+                    </div>
+                    <div class="file-name">
+                        Null.js
+                    </div>
+                </div>
+<div class="card-body">
+    <pre><code><span class="keyword">let</span> <span class="variable">userData</span> <span class="operator">=</span> <span class="constant">null</span>; <span class="comment">// Menunjukkan bahwa data user<br> sengaja dikosongkan</span></code></pre>
+</div>
+                
+            </div>
+        </div>        
+        
+        <div class="container primitif">
+            <div class="content-id-primitif">
+                <li><strong>BigInt</strong></li>
+                <ul>
+                    <li>Penjelasan: Digunakan untuk menyimpan bilangan bulat yang sangat besar, di luar kapasitas tipe Number. Dibuat dengan menambahkan n di akhir angka.</li>
+                </ul>
+            </div>
+            
+            <div class="code-card">
+                <div class="header-card">
+                    <div class="window-control">
+                        <div class="control close"></div>
+                        <div class="control minimaze"></div>
+                    </div>
+                    <div class="file-name">
+                        BigInt.js
+                    </div>
+                </div>
+<div class="card-body">
+    <pre><code><span class="keyword">let</span> <span class="variable">bigNumber</span> <span class="operator">=</span> <span class="number">9007199254740991n</span>;
+<span class="keyword">let</span> <span class="variable">alsoBig</span> <span class="operator">=</span> <span class="function">BigInt</span>(<span class="string">"9007199254740991"</span>); <span class="comment">// Cara lain</span></code></pre>
+</div>
+                
+            </div>
+        </div>
+        
+        <div class="container primitif">
+            <div class="content-id-primitif">
+                <li><strong>Symbol</strong></li>
+                <ul>
+                    <li>Penjelasan: Diperkenalkan di ES6 (2015). Symbol adalah nilai primitif yang unik dan tidak dapat diubah (immutable). Sering digunakan sebagai key identifier untuk properti objek untuk menghindari konflik nama.</li>
+                </ul>
+            </div>
+            
+            <div class="code-card">
+                <div class="header-card">
+                    <div class="window-control">
+                        <div class="control close"></div>
+                        <div class="control minimaze"></div>
+                    </div>
+                    <div class="file-name">
+                        Symbol.js
+                    </div>
+                </div>
+<div class="card-body">
+    <pre><code><span class="keyword">let</span> <span class="variable">id1</span> <span class="operator">=</span> <span class="function">Symbol</span>(<span class="string">"id"</span>);
+<span class="keyword">let</span> <span class="variable">id2</span> <span class="operator">=</span> <span class="function">Symbol</span>(<span class="string">"id"</span>);
+<span class="function">console</span>.<span class="function">log</span>(<span class="variable">id1</span> <span class="operator">===</span> <span class="variable">id2</span>); <span class="comment">// Output: false (karena unik)</span></code></pre>
+</div>
+                
+            </div>
+        </div>        
+        
+        </ol>
+        <div class="container var-button">
+            <a href="/materi variabel/id-4.html"><button>< prev </button></a>
+            <a href="/materi variabel/id-6.html"><button>next ></button></a>
+        </div>
+    </main>
+    
+    <!-- java script navbar -->
+    <script src="/asets/js/navbar.js"></script>
+    <script>
+        // Memuat navbar
+        loadNavbar();
+        
+        // Menandai halaman aktif
+        highlightCurrentPage('beranda');
+        
+    </script>
+</body>
+</html>

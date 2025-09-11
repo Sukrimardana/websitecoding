@@ -1,0 +1,148 @@
+Of course! Mari kita bahas tipe data primitif khusus dalam konteks JavaScript.
+
+Tipe Data Primitif di JavaScript
+
+JavaScript adalah bahasa yang dinamis dan loosely typed, yang berarti variabel tidak langsung terkait dengan tipe data tertentu. Namun, nilai yang disimpan dalam variabel itu sendiri memiliki tipe.
+
+Tipe data primitif di JavaScript adalah data yang bukan objek dan tidak memiliki method (pada dasarnya). Yang unik dari JavaScript adalah ia menyediakan object wrapper untuk tipe primitif ini, yang memungkinkan kita menggunakan method seolah-olah primitif adalah objek (contoh: 'hello'.length).
+
+Menurut ECMAScript standard (spesifikasi dasar JavaScript), ada 7 tipe data primitif:
+
+---
+
+1. Number
+
+· Penjelasan: Merupakan tipe data untuk semua angka, baik bilangan bulat (integer) maupun pecahan (floating-point). JavaScript tidak memiliki tipe terpisah untuk integer dan float; semuanya adalah Number.
+· Nilai Khusus: NaN (Not a Number) dan Infinity.
+· Contoh:
+```javascript
+let age = 30; // integer
+let price = 99.99; // floating-point
+let result = 10 / "abc"; // NaN
+let infinite = 1 / 0; // Infinity
+```
+
+2. String
+
+· Penjelasan: Merepresentasikan serangkaian karakter. digunakan untuk teks. Diapit oleh tanda kutip tunggal ('), ganda ("), atau backtick ( ` ).
+· Contoh:
+```javascript
+let name = "Alice";
+let greeting = 'Hello world!';
+let message = `My name is ${name}`; // Template literal dengan interpolation
+```
+
+3. Boolean
+
+· Penjelasan: Hanya memiliki dua nilai: true (benar) dan false (salah). Sangat penting untuk pengambilan keputusan (kondisi seperti if/else).
+· Contoh:
+```javascript
+let isLoggedIn = true;
+let isGreater = 10 > 5; // Nilainya adalah true
+```
+
+4. Undefined
+
+· Penjelasan: Nilai ini diberikan secara otomatis kepada variabel yang telah dideklarasikan tetapi belum diberi nilai.
+· Contoh:
+```javascript
+let x;
+console.log(x); // Output: undefined
+```
+
+5. Null
+
+· Penjelasan: Merupakan nilai khusus yang berarti tidak ada nilai sama sekali atau nilai yang kosong. Null harus secara eksplisit diberikan oleh programmer kepada sebuah variabel.
+· Contoh:
+```javascript
+let userData = null; // Menunjukkan bahwa data user sengaja dikosongkan
+```
+
+6. BigInt
+
+· Penjelasan: Digunakan untuk menyimpan bilangan bulat yang sangat besar, di luar kapasitas tipe Number. Dibuat dengan menambahkan n di akhir angka.
+· Contoh:
+```javascript
+let bigNumber = 9007199254740991n;
+let alsoBig = BigInt("9007199254740991"); // Cara lain
+```
+
+7. Symbol
+
+· Penjelasan: Diperkenalkan di ES6 (2015). Symbol adalah nilai primitif yang unik dan tidak dapat diubah (immutable). Sering digunakan sebagai key identifier untuk properti objek untuk menghindari konflik nama.
+· Contoh:
+```javascript
+let id1 = Symbol("id");
+let id2 = Symbol("id");
+console.log(id1 === id2); // Output: false (karena unik)
+```
+
+---
+
+Pembelajaran dan Contoh Kode
+
+Mari kita lihat cara kerja tipe-tipe ini dengan beberapa contoh praktis.
+
+1. Membedakan undefined dan null
+
+```javascript
+let a; // Deklarasi tanpa assignment
+console.log(a); // undefined (otomatis oleh JavaScript)
+
+let b = null; // Assignment manual
+console.log(b); // null (sengaja diberikan oleh programmer)
+
+// Periksa tipe data-nya
+console.log(typeof a); // "undefined"
+console.log(typeof b); // "object" (Ini adalah bug terkenal dalam JavaScript!)
+```
+
+2. Keunikan Symbol
+
+```javascript
+// Membuat dua Symbol dengan deskripsi yang sama
+const sym1 = Symbol('key');
+const sym2 = Symbol('key');
+
+console.log(sym1 === sym2); // false! Meski deskripsinya sama, mereka unik.
+
+// Penggunaan praktis: sebagai key objek
+const obj = {};
+obj[sym1] = "Value for sym1";
+obj[sym2] = "Value for sym2";
+
+console.log(obj[sym1]); // "Value for sym1"
+console.log(obj[sym2]); // "Value for sym2"
+// Tidak ada konflik karena key-nya unik
+```
+
+3. Pengecekan Tipe Data yang Aman
+
+Gunakan typeof untuk memeriksa tipe data primitif (dengan catatan untuk null).
+
+```javascript
+let number = 42;
+let text = "Hello";
+let isActive = true;
+let notDefined;
+let empty = null;
+
+console.log(typeof number); // "number"
+console.log(typeof text); // "string"
+console.log(typeof isActive); // "boolean"
+console.log(typeof notDefined); // "undefined"
+console.log(typeof empty); // "object" (hati-hati dengan ini!)
+```
+
+Kesimpulan Kunci
+
+1. Primitif vs Non-Primitif (Object): Tipe data primitif disimpan berdasarkan nilainya (passed by value). Ketika Anda menyalinnya, Anda membuat salinan nilai yang independen. Ini berbeda dengan Object (seperti Array, Function) yang disimpan berdasarkan referensinya (passed by reference).
+2. Immutable: Nilai dari tipe data primitif tidak dapat diubah (immutable). Sebuah operasi pada string, misalnya, akan menciptakan string baru, bukan mengubah string aslinya.
+```javascript
+let myString = "hello";
+myString.toUpperCase(); // Method ini mengembalikan string BARU "HELLO"
+console.log(myString); // "hello" (nilai aslinya tidak berubah)
+```
+3. Object Wrapper: Untuk memungkinkan penggunaan method (seperti 'abc'.length), JavaScript secara sementara membungkus primitif ke dalam objeknya (String, Number, Boolean), menjalankan methodnya, lalu membuang objek bungkusannya. Proses ini disebut "boxing".
+
+Dengan memahami tipe data primitif, Anda memiliki fondasi yang kuat untuk mempelajari konsep yang lebih kompleks seperti struktur data, operasi, dan alur logika dalam JavaScript.

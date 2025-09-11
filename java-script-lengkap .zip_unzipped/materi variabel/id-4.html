@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment Operator di JavaScript</title>
+    <link rel="stylesheet" href="/asets/css/navbar.css">
+    <link rel="stylesheet" href="/style.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="/asets/css/font.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="/asets/css/responsive-mobile.css" type="text/css" media="all" />
+</head>
+<body>
+    <!-- Navbar akan dimuat oleh JavaScript -->
+    <div id="navbar-container"></div>
+    
+    <main class="main-content variabel-main">
+        <div class="container id-variabel1">
+           <div class="judul-materi">
+              <h3>Assignment Operator di JavaScript</h3> 
+           </div>
+        </div>
+        
+        <div class="container content-var">
+            Assignment operator digunakan untuk memberikan nilai ke variabel. Berikut adalah penjelasan lengkap tentang berbagai jenis assignment operator di JavaScript:
+        </div>
+        
+        <div class="container var-asiggment">
+            <ol>
+            <div class="content-id-asiggment">
+                <li>Assignment Operator Dasar (=)</li>
+                <div class="code">
+    let x = 10; // Memberikan nilai 10 ke variabel x<br>
+    let nama = "John"; // Memberikan string "John" ke variabel nama<br>
+    let isActive = true; // Memberikan nilai boolean true<br>
+</div>
+            </div>
+            <div class="content-id-asiggment">
+                <li>Compound Assignment Operators</li>
+                <p>Operator yang menggabungkan operasi aritmatika dengan assignment:</p>
+                <br>
+                <ul><strong><em>Addition Assignment (+=)</em></strong></ul>
+               <div class="code">
+    let a = 5;<br>
+    a += 3; // Sama dengan: a = a + 3<br>
+    console.log(a); // Output: 8<br>
+    <br>
+    let text = "Hello";<br>
+    text += " World"; // Sama dengan: text = text + " World"<br>
+    console.log(text); // Output: "Hello World"<br>
+</div>
+                <ul><strong><em>Subtraction Assignment (-=)</em></strong></ul>
+                <div class="code">
+    let b = 10;<br>
+    b -= 4; // Sama dengan: b = b - 4<br>
+    console.log(b); // Output: 6<br>
+</div>
+                <ul><strong><em>Multiplication Assignment (*=)</em></strong></ul>
+                <div class="code">
+    let c = 7;<br>
+    c *= 2; // Sama dengan: c = c * 2<br>
+    console.log(c); // Output: 14<br>
+</div>
+                <ul><strong><em>Division Assignment (/=)</em></strong></ul>
+                <div class="code">
+    let d = 20;<br>
+    d /= 4; // Sama dengan: d = d / 4<br>
+    console.log(d); // Output: 5<br>
+</div>
+                <ul><strong><em>Remainder Assignment (%=)</em></strong></ul>
+                <div class="code">
+    let e = 15;<br>
+    e %= 4; // Sama dengan: e = e % 4<br>
+    console.log(e); // Output: 3 (karena 15 ÷ 4 = 3 sisa 3)<br>
+</div>
+   <ul><strong><em>Exponentiation Assignment (**=)</em></strong></ul>             
+                <div class="code">
+    let f = 2;<br>
+    f **= 3; // Sama dengan: f = f ** 3 (2 pangkat 3)<br>
+    console.log(f); // Output: 8<br>
+</div>
+            </div>
+            <div class="content-id-asiggment">
+                <li>Bitwise Assignment Operators</li>
+<ul><strong><em>Left Shift Assignment (<<=)< /em></strong></ul>
+<div class="code">
+    let g = 5; // Binary: 101<br>
+    g <<= 1; // Sama dengan: g=g << 1 (Binary: 1010)<br>
+        console.log(g); // Output: 10<br>
+</div>
+<ul><strong><em>Right Shift Assignment (>>=)</em></strong></ul>
+<div class="code">
+    let h = 10; // Binary: 1010<br>
+    h >>= 1; // Sama dengan: h = h >> 1 (Binary: 101)<br>
+    console.log(h); // Output: 5<br>
+</div>
+<ul><strong><em>Unsigned Right Shift Assignment (>>>=)</em></strong></ul>
+<div class="code">
+    let i = -10; <br>
+    i >>>= 1; // Shift right tanpa memperhatikan tanda<br>
+    console.log(i); // Output: 2147483643 (pada 32-bit)<br>
+</div>
+<ul><strong><em>Bitwise AND Assignment (&=)</em></strong></ul>
+<div class="code">
+    let j = 5; // Binary: 101<br>
+    j &= 3; // Sama dengan: j = j & 3 (Binary: 001)<br>
+    console.log(j); // Output: 1<br>
+</div>
+<ul><strong><em>Bitwise OR Assignment (|=)</em></strong></ul>
+<div class="code">
+    let k = 5; // Binary: 101<br>
+    k |= 3; // Sama dengan: k = k | 3 (Binary: 111)<br>
+    console.log(k); // Output: 7<br>
+</div>
+<ul><strong><em>Bitwise XOR Assignment (^=)</em></strong></ul>
+<div class="code">
+    let l = 5; // Binary: 101<br>
+    l ^= 3; // Sama dengan: l = l ^ 3 (Binary: 110)<br>
+    console.log(l); // Output: 6<br>
+</div>
+            </div>            
+            <div class="content-id-asiggment">
+                <li>Logical Assignment Operators (ES2021)</li>
+                <ul><strong><em>Logical AND Assignment (&&=)</em></strong></ul>
+<div class="code">
+    let user = { name: "John" };<br>
+    user.name &&= "Anonymous"; // Hanya assign jika user.name truthy<br>
+    console.log(user.name); // Output: "John"<br>
+    <br>
+    let user2 = { name: "" };<br>
+    user2.name &&= "Anonymous"; // Tidak assign karena user2.name falsy<br>
+    console.log(user2.name); // Output: ""<br>
+</div>
+
+<ul><strong><em>Logical OR Assignment (||=)</em></strong></ul>
+<div class="code">
+    let config = { theme: null };<br>
+    config.theme ||= "dark"; // Assign "dark" jika config.theme falsy<br>
+    console.log(config.theme); // Output: "dark"<br>
+    <br>
+    let config2 = { theme: "light" };<br>
+    config2.theme ||= "dark"; // Tidak assign karena config2.theme truthy<br>
+    console.log(config2.theme); // Output: "light"<br>
+</div>
+
+<ul><strong><em>Nullish Coalescing Assignment (??=)</em></strong></ul>
+<div class="code">
+    let settings = { volume: 0 };<br>
+    settings.volume ??= 50; // Assign 50 hanya jika settings.volume null atau undefined<br>
+    console.log(settings.volume); // Output: 0 (karena 0 bukan null/undefined)<br>
+    <br>
+    let settings2 = { volume: null };<br>
+    settings2.volume ??= 50; // Assign 50 karena settings2.volume null<br>
+    console.log(settings2.volume); // Output: 50<br>
+</div>
+            </div>            
+            <div class="content-id-asiggment">
+              <li>Chaining Assignment</li>  
+            <div class="code">
+    let x, y, z;<br>
+    x = y = z = 10; // Semua variabel mendapat nilai 10<br>
+    console.log(x, y, z); // Output: 10 10 10<br>
+</div>
+            </div>            
+            <div class="content-id-asiggment">
+                <li>Destructuring Assignment</li>
+                <div class="code">
+    // Array Destructuring<br>
+    const [first, second] = [1, 2];<br>
+    console.log(first, second); // Output: 1 2<br>
+    <br>
+    // Object Destructuring<br>
+    const { name, age } = { name: "Alice", age: 25 };<br>
+    console.log(name, age); // Output: "Alice" 25<br>
+    <br>
+    // Dengan default values<br>
+    const [a = 1, b = 2] = [10];<br>
+    console.log(a, b); // Output: 10 2<br>
+    <br>
+    // Swapping variables<br>
+    let m = 1, n = 2;<br>
+    [m, n] = [n, m];<br>
+    console.log(m, n); // Output: 2 1<br>
+</div>
+            </div>
+            <div class="content-id-asiggment">
+                <ul>
+                    <strong><em>Contoh praktis</em></strong>
+                </ul>
+                <div class="code">
+    // Perhitungan total belanja<br>
+    let total = 0;<br>
+    let hargaBarang = 10000;<br>
+    let jumlah = 3;<br>
+    <br>
+    total += hargaBarang * jumlah; // total = 30000<br>
+    total *= 0.9; // Diskon 10%, total = 27000<br>
+    console.log(`Total belanja: Rp${total}`);<br>
+    <br>
+    // Update nilai berdasarkan kondisi<br>
+    let score = 85;<br>
+    score += score > 80 ? 10 : 5; // Tambah 10 jika score > 80<br>
+    console.log(score); // Output: 95<br>
+</div>
+            </div>
+            </ol>
+            <div class="content-id-asiggment important-tips">
+                <ul>
+                    <h3>Tips Penting!</h3>
+                </ul>
+                <ol>
+                    <li>Gunakan compound assignment untuk kode yang lebih ringkas</li>
+                    <li>Perhatikan urutan operasi (operator precedence)</li>
+                    <li>Logical assignment operators sangat berguna untuk nilai default</li>
+                    <li>Destructuring assignment sangat powerful untuk bekerja dengan array dan object</li>
+                </ol>
+            </div>            
+        </div>
+        <div class="container var-button">
+            <a href="/materi variabel/id-3.html"><button>< prev </button></a>
+            <a href="/materi variabel/id-5.html"><button>next ></button></a>
+        </div>
+    </main>
+    
+    <!-- java script navbar -->
+    <script src="/asets/js/navbar.js"></script>
+    <script>
+        // Memuat navbar
+        loadNavbar();
+        
+        // Menandai halaman aktif
+        highlightCurrentPage('beranda');
+        
+    </script>
+</body>
+</html>

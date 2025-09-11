@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aturan Penamaan Variabel</title>
+    <link rel="stylesheet" href="/asets/css/navbar.css">
+    <link rel="stylesheet" href="/style.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="/asets/css/font.css" type="text/css" media="all" />
+</head>
+<body>
+    <!-- Navbar akan dimuat oleh JavaScript -->
+    <div id="navbar-container"></div>
+    
+    <main class="main-content variabel-main">
+        <div class="container id-variabel1">
+           <div class="judul-materi">
+              <h3>Aturan Penamaan Variabel</h3>
+           </div>
+        </div>
+        
+        <div class="container content-var">
+            <ol>
+                <li>Boleh: huruf, angka, $, _</li>
+                <li>Tidak boleh: diawali angka, spasi, karakter khusus</li>
+                <li>Case sensitive: nama ≠ Nama ≠ NAMA</li>
+                <li>Tidak boleh: menggunakan kata kunci JavaScript (seperti let, if, function)</li>                
+            </ol>
+
+<div class="code">
+    // Benar<br>
+    &nbsp;&nbsp;let namaLengkap;<br>
+    &nbsp;&nbsp;let _privateData;<br>
+    &nbsp;&nbsp;let $element;<br>
+    &nbsp;&nbsp;let user2;<br>
+    <br>
+    // Salah<br>
+    &nbsp;&nbsp;let 2ndPlace; // diawali angka<br>
+    &nbsp;&nbsp;let full name; // ada spasi<br>
+    &nbsp;&nbsp;let let; // kata kunci<br>
+</div>
+            <strong><em>contoh pengunaan:</em></strong>
+            
+<div class="code">
+    // Deklarasi variabel<br>
+    &nbsp;&nbsp;let nama = "Budi Santoso";<br>
+    &nbsp;&nbsp;const umur = 30;<br>
+    &nbsp;&nbsp;let isActive = true;<br>
+    <br>
+    // Menggunakan variabel<br>
+    &nbsp;&nbsp;console.log("Nama: " + nama); // Output: Nama: Budi Santoso<br>
+    &nbsp;&nbsp;console.log("Umur: " + umur + " tahun"); // Output: Umur: 30 tahun<br>
+    <br>
+    // Mengubah nilai variabel let<br>
+    &nbsp;&nbsp;nama = "Budi Raharjo";<br>
+    &nbsp;&nbsp;isActive = false;<br>
+    <br>
+    &nbsp;&nbsp;console.log("Nama baru: " + nama); // Output: Nama baru: Budi Raharjo<br>
+</div>
+        <strong><em>Tipe Data yang Disimpan</em></strong>
+        <p>Variabel JavaScript dapat menyimpan berbagai tipe data:
+</p>
+        <div class="code">
+    // String (teks)<br>
+    &nbsp;&nbsp;let greeting = "Hello World!";<br>
+    <br>
+    // Number (angka)<br>
+    &nbsp;&nbsp;let count = 42;<br>
+    &nbsp;&nbsp;let price = 19.99;<br>
+    <br>
+    // Boolean (true/false)<br>
+    &nbsp;&nbsp;let isLoggedIn = true;<br>
+    &nbsp;&nbsp;let hasPermission = false;<br>
+    <br>
+    // Array (kumpulan nilai)<br>
+    &nbsp;&nbsp;let fruits = ["Apple", "Banana", "Orange"];<br>
+    <br>
+    // Object (data terstruktur)<br>
+    &nbsp;&nbsp;let person = {<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;name: "Alice",<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;age: 25,<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;city: "Jakarta"<br>
+    &nbsp;&nbsp;};<br>
+    <br>
+    // Null (kosong)<br>
+    &nbsp;&nbsp;let emptyValue = null;<br>
+    <br>
+    // Undefined (belum didefinisikan)<br>
+    &nbsp;&nbsp;let notDefined;<br>
+</div>
+        <div class="content1">
+            <strong>Kesimpulan</strong>
+            <p>Aspek Penjelasan
+Fungsi Menyimpan dan mengelola data dalam program
+Cara Modern Gunakan let untuk nilai yang berubah, const untuk nilai tetap
+Keuntungan Code lebih mudah dibaca, diubah, dan dikelola
+Best Practice Gunakan nama yang deskriptif dan konsisten
+
+Variabel adalah fondasi dasar pemrograman yang memungkinkan Anda menyimpan, mengakses, dan memanipulasi data dalam program JavaScript Anda.</p>
+        </div>
+        </div>
+        
+        <div class="container var-button">
+            <a href="/materi variabel/id-2.html"><button>< prev </button></a>
+            <a href="/materi variabel/id-4.html"><button>next ></button></a>
+        </div>
+    </main>
+    
+    <!-- java script navbar -->
+    <script src="/asets/js/navbar.js"></script>
+    <script>
+        // Memuat navbar
+        loadNavbar();
+        
+        // Menandai halaman aktif
+        highlightCurrentPage('beranda');
+        
+    </script>
+</body>
+</html>

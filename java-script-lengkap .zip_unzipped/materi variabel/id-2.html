@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deklarasi Variabel</title>
+    <link rel="stylesheet" href="/asets/css/navbar.css">
+    <link rel="stylesheet" href="/style.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="/asets/css/font.css" type="text/css" media="all" />
+</head>
+<body>
+    <!-- Navbar akan dimuat oleh JavaScript -->
+    <div id="navbar-container"></div>
+    
+    <main class="main-content variabel-main">
+        <div class="container id-variabel1">
+           <div class="judul-materi">
+              <h3>Deklarasi Variabel (Membuat Variabel)</h3> 
+           </div>
+        </div>
+        
+        <div class="container content-var">
+            <p><strong>Untuk membuat variabel di JavaScript, kita menggunakan kata kunci khusus. Ada 3 cara utama:</strong></p>
+            <ol>
+            <li><strong>var (Cara Lama)</strong></li>
+            <div class="code">
+            var namaPembeli;<br>
+            &nbsp;&nbsp;var harga = 50000;
+            </div>
+            <ul>
+                <li>Fungsi: Deklarasi variabel konstan yang tidak bisa diubah.</li>
+            </ul>
+            <ul>
+                <li>Bisa diubah: Tidak, nilai harus langsung diassign dan tidak bisa berubah.</li>
+            </ul>
+            <ul>
+                <li>Rekomendasi: Gunakan untuk nilai yang tetap sepanjang kode.</li>
+            </ul>
+            
+            
+            <li><strong>let (Cara Modern - Dapat Diubah)</strong></li>
+                <div class="code">
+let usia = 25;<br>
+let alamat;<br>
+usia = 26; // Nilai bisa diubah                    
+            </div>
+            <ul>
+                <li>Fungsi: Deklarasi variabel dengan scope blok {}.</li>
+            </ul>
+            <ul>
+                <li>Bisa diubah: Ya, nilainya bisa diubah setelah dideklarasikan.</li>
+            </ul>
+            <ul>
+                <li>Rekomendasi: Gunakan untuk nilai yang perlu diubah nanti.</li>
+            </ul>
+            
+            <li><strong>const (Cara Modern - Konstan/Tetap)</strong></li>
+            <div class="code">
+        const pi = 3.14;<br>
+const namaAplikasi = "MyApp";<br>
+// pi = 3.15; // ERROR! Tidak bisa diubah      
+            </div>
+            
+          <ul>
+                <li>Fungsi: Deklarasi variabel konstan yang tidak bisa diubah.</li>
+            </ul>
+            <ul>
+                <li>Bisa diubah: Tidak, nilai harus langsung diassign dan tidak bisa berubah.</li>
+            </ul>
+            <ul>
+                <li>Rekomendasi: Gunakan untuk nilai yang tetap sepanjang kode.</li>
+            </ul>
+            
+            </ol>
+        </div>
+
+        <div class="container var-button">
+            <a href="/materi variabel/id-1.html"><button>< prev </button></a>
+            <a href="/materi variabel/id-3.html"><button>next ></button></a>
+        </div>
+    </main>
+    
+    <!-- java script navbar -->
+    <script src="/asets/js/navbar.js"></script>
+    <script>
+        // Memuat navbar
+        loadNavbar();
+        
+        // Menandai halaman aktif
+        highlightCurrentPage('beranda');
+        
+    </script>
+</body>
+</html>
